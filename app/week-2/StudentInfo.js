@@ -2,9 +2,9 @@ import Link from "next/link";
 
 export default function StudentInfo() {
   return (
-    <main>
+    <main className="text-white text-center">
       <h1>Adegoke Jaafar</h1>
-      <Link href="/">Github</Link>
+      <Link href="https://github.com/Hardeyemi30/cprg306-assignments">Github</Link>
       
     </main>
   );
