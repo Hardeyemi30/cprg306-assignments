@@ -2,7 +2,11 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-          <><p className="">CPRG 306: Web Development 2 - Assignments</p>
-      <Link href="week-2">Go to week-2</Link></>
+      <>
+      <p className="">CPRG 306: Web Development 2 - Assignments</p>
+      <Link href="week-2" className="mr-5">Go to week-2</Link>
+
+      <Link href="week-3">Go to week-3</Link>
+      </>
   );
 }
