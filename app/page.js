@@ -7,7 +7,8 @@ export default function Home() {
       <Link href="week-2" className="mr-5">Go to week-2</Link>
       <Link href="week-3" className="mr-5">Go to week-3</Link>
       <Link href="week-4" className="mr-5">Go to week-4</Link>
-      <Link href="week-5">Go to week-5</Link>
+      <Link href="week-5" className="mr-5">Go to week-5</Link>
+        <Link href="week-6">Go to week-6</Link>
       </>
   );
 }

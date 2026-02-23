@@ -1,4 +1,4 @@
-import ItemList from "./item-list";
+import ItemList from "./itemList";
 
 export default function Page() {
   return (
