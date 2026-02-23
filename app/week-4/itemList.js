@@ -6,13 +6,15 @@ import Item from "./item";
 export default function ItemList({ items }) {
   const [sortBy, setSortBy] = useState("name");
 
-  const sortedItems = [...items].sort((a, b) => {
-    if (sortBy === "name") {
-      return a.name.localeCompare(b.name);
-    } else {
-      return a.category.localeCompare(b.category);
-    }
-  });
+  const sortedItems = Array.isArray(items)
+  ? [...items].sort((a, b) => {
+      if (sortBy === "name") {
+        return a.name.localeCompare(b.name);
+      } else {
+        return a.category.localeCompare(b.category);
+      }
+    })
+  : [];
 
   return (
     <div className="max-w-md mx-auto mt-6">
