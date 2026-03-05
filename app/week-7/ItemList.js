@@ -4,15 +4,15 @@ import { useState } from "react";
 export default function ItemList({ items }) {
   const [sortBy, setSortBy] = useState("name");
 
-  // Create a copy BEFORE sorting (immutability!)
-  const sortedItems = [...items].sort((a, b) => {
-    if (sortBy === "name") {
-      return a.name.localeCompare(b.name);
-    } else if (sortBy === "category") {
-      return a.category.localeCompare(b.category);
-    }
-    return 0;
-  });
+  const sortedItems = Array.isArray(items)
+    ? [...items].sort((a, b) => {
+        if (sortBy === "name") {
+          return a.name.localeCompare(b.name);
+        } else {
+          return a.category.localeCompare(b.category);
+        }
+      })
+    : [];
 
   return (
     <div className="w-full max-w-md mt-6">
