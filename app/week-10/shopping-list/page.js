@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import ItemList from "./ItemList";
 import MealIdeas from "./MealIdeas";
-import { getItems, addItem } from "./_services/shopping-list-service";
+import { getItems, addItem } from "../_services/shopping-list-service";
 // import itemsData from "../../week-4/items.json";
 
 export default function Page() {
