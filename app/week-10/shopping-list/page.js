@@ -1,12 +1,14 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useUserAuth } from "../../contexts/AuthContext";
 import ItemList from "./ItemList";
 import MealIdeas from "./MealIdeas";
 import { getItems, addItem } from "../_services/shopping-list-service";
 // import itemsData from "../../week-4/items.json";
 
 export default function Page() {
+  const { user } = useUserAuth();
   const [items, setItems] = useState([]);
   const [selectedItemName, setSelectedItemName] = useState("");
 
